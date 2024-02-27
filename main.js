@@ -86,35 +86,56 @@ let userGuess;
 
 //     -ask the user for a number (1 to 5)
 
-const userNumber = Number(prompt('write a number between 1 and 5'));
+// const userNumber = Number(prompt('write a number between 1 and 5'));
+const userNumber = 4;
 console.log(userNumber);
 
 //     -generate a number for the computer (1 to 5)
 
 
-function getRandomNumberInt(min, max) {
+/* function getRandomNumberInt(min, max) {
     return Math.floor(Math.random() * (5 - 1 + 1) ) + 1;
 };
 
 const computerNumber = getRandomNumberInt();
-console.log(computerNumber);
+console.log(computerNumber); */
 
 //     -add the two numbers
 
-const sum = userNumber + computerNumber;
+// const sum = userNumber + computerNumber;
 
 //     -check if the result is even or odd
 
-let winnerMessage = 'the sum is odd';
+/* let winnerMessage = 'the sum is odd';
 
 if (sum % 2 === 0) {
     winnerMessage = 'the number is even'
-}
+} */
 
 //     -print if the user win or loose
 
 
-console.log(winnerMessage);
+// console.log(winnerMessage);
 
 
 //     -set the exercise as a function
+
+function sumNcheck(userNumber) {
+
+    function getRandomNumberInt(min, max) {
+        return Math.floor(Math.random() * (5 - 1 + 1) ) + 1;
+    };
+    
+    const computerNumber = getRandomNumberInt();
+    
+    console.log(computerNumber);
+
+    const result = (userNumber + computerNumber) % 2;
+
+    console.log(result);
+
+    return result === 0
+};
+
+
+console.log(sumNcheck(userNumber));
