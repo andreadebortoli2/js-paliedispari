@@ -16,8 +16,10 @@ Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzion
         -push each letter as an element of the array
     -check if the word is a palindrome
         -read the array in reverse
-        -find if the array reverse is equal to the normalò array
+        -find if the array reverse is equal to the normal array
     -print the result
+
+    -set the exercise as a function
 
 # Tools
 
@@ -26,6 +28,7 @@ Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzion
 -.split()
 -.push()
 -.reverse()
+-for loop
 -if / else
 -function name(params){ }
 -console.log()
