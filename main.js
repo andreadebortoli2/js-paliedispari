@@ -50,8 +50,7 @@ for (let i = 0; i < lettersList.length; i++) {
 
 function palindromeCheck() {
 
-    // const userWord = prompt('write a word');
-    const userWord = 'otto';
+    const userWord = prompt('write a word');
 
     const lettersList = [];
 
@@ -75,7 +74,7 @@ if (palindromeCheck() === true) {
     resultMessage = 'The word IS a plaindrome';
 };
 
-// alert(resultMessage);
+alert(resultMessage);
 
 
 
@@ -156,15 +155,16 @@ form.addEventListener('submit', function (e) {
     console.log(userGuess);
     console.log(userNumber);
 
+    function getRandomNumberInt(min, max) {
+        return Math.floor(Math.random() * (5 - 1 + 1)) + 1;
+    };
+
+    const computerNumber = getRandomNumberInt();
+
+    console.log(computerNumber);
+
     function sumNcheck(userNumber) {
 
-        function getRandomNumberInt(min, max) {
-            return Math.floor(Math.random() * (5 - 1 + 1)) + 1;
-        };
-
-        const computerNumber = getRandomNumberInt();
-
-        console.log(computerNumber);
 
         const result = (userNumber + computerNumber) % 2;
 
@@ -180,5 +180,15 @@ form.addEventListener('submit', function (e) {
     } else {
         console.log('loose');
     }
+
+    const resultBox = document.querySelector('.result_box');
+
+    const evenOrOdd = sumNcheck(userNumber) ? 'EVEN' : 'ODD'
+
+    const winLoose = userGuess === sumNcheck(userNumber) ? 'WIN' : 'LOOSE'
+
+    const resultMarkup = `the computer number was ${computerNumber} and the sum was ${evenOrOdd} so you ${winLoose}!!`
+
+    resultBox.insertAdjacentHTML('beforeend', resultMarkup);
 
 });
