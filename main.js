@@ -1,5 +1,7 @@
 // console.log('HI');
 
+//--- # 1
+
 // -ask user for a word
 
 // const userWord = prompt('write a word');
@@ -48,7 +50,8 @@ for (let i = 0; i < lettersList.length; i++) {
 
 function palindromeCheck() {
     
-    const userWord = prompt('write a word');
+    // const userWord = prompt('write a word');
+    const userWord = 'otto';
 
     const lettersList = [];
     
@@ -72,4 +75,31 @@ if (palindromeCheck() === true) {
     resultMessage = 'The word IS a plaindrome';
 };
 
-alert(resultMessage);
+// alert(resultMessage);
+
+
+// --- # 2
+
+//     -ask the user for the guess (even/odd)
+
+const userGuess = 'even';
+
+//     -ask the user for a number (1 to 5)
+
+const userNumber = Number(prompt('write a number between 1 and 5'));
+
+//     -generate a number for the computer (1 to 5)
+
+
+function getRandomNumberInt(min, max) {
+    return Math.floor(Math.random() * (5 - 1 + 1) ) + 1;
+};
+
+const computerNumber = getRandomNumberInt();
+console.log(computerNumber);
+
+//     -add the two numbers
+//     -check if the result is even or odd
+//     -print if the user win or loose
+
+//     -set the exercise as a function

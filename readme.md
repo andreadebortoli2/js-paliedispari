@@ -21,6 +21,17 @@ Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzion
 
     -set the exercise as a function
 
+
+- # 2
+    -ask the user for the guess (even/odd)
+    -ask the user for a number (1 to 5)
+    -generate a number for the computer (1 to 5)
+    -add the two numbers
+    -check if the result is even or odd
+    -print if the user win or loose
+
+    -set the exercise as a function 
+
 # Tools
 
 -prompt
@@ -32,3 +43,6 @@ Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzion
 -if / else
 -function name(params){ }
 -console.log()
+-alert
+-math.random
+-%
