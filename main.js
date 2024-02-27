@@ -152,8 +152,8 @@ form.addEventListener('submit', function (e) {
     const userGuess = document.getElementById('even').checked;
     const userNumber = Number(document.getElementById('user_number').value);
 
-    console.log(userGuess);
-    console.log(userNumber);
+    // console.log(userGuess);
+    // console.log(userNumber);
 
     function getRandomNumberInt(min, max) {
         return Math.floor(Math.random() * (5 - 1 + 1)) + 1;
@@ -161,7 +161,7 @@ form.addEventListener('submit', function (e) {
 
     const computerNumber = getRandomNumberInt();
 
-    console.log(computerNumber);
+    // console.log(computerNumber);
 
     function sumNcheck(userNumber) {
 
@@ -174,12 +174,6 @@ form.addEventListener('submit', function (e) {
     };
 
     // console.log(sumNcheck(userNumber));
-
-    if (userGuess === sumNcheck(userNumber)) {
-        console.log('win');
-    } else {
-        console.log('loose');
-    }
 
     const resultBox = document.querySelector('.result_box');
 
