@@ -82,11 +82,12 @@ if (palindromeCheck() === true) {
 
 //     -ask the user for the guess (even/odd)
 
-const userGuess = 'even';
+let userGuess;
 
 //     -ask the user for a number (1 to 5)
 
 const userNumber = Number(prompt('write a number between 1 and 5'));
+console.log(userNumber);
 
 //     -generate a number for the computer (1 to 5)
 
@@ -99,7 +100,21 @@ const computerNumber = getRandomNumberInt();
 console.log(computerNumber);
 
 //     -add the two numbers
+
+const sum = userNumber + computerNumber;
+
 //     -check if the result is even or odd
+
+let winnerMessage = 'the sum is odd';
+
+if (sum % 2 === 0) {
+    winnerMessage = 'the number is even'
+}
+
 //     -print if the user win or loose
+
+
+console.log(winnerMessage);
+
 
 //     -set the exercise as a function
