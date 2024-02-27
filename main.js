@@ -49,15 +49,15 @@ for (let i = 0; i < lettersList.length; i++) {
 
 
 function palindromeCheck() {
-    
+
     // const userWord = prompt('write a word');
     const userWord = 'otto';
 
     const lettersList = [];
-    
+
     for (let i = 0; i < userWord.length; i++) {
         const element = userWord[i];
-    
+
         lettersList.push(element);
     };
 
@@ -78,17 +78,20 @@ if (palindromeCheck() === true) {
 // alert(resultMessage);
 
 
+
+
+
 // --- # 2
 
 //     -ask the user for the guess (even/odd)
 
-let userGuess;
+/* const userGuess = document.getElementById('even').checked
+console.log(userGuess); */
 
 //     -ask the user for a number (1 to 5)
 
-// const userNumber = Number(prompt('write a number between 1 and 5'));
-const userNumber = 4;
-console.log(userNumber);
+/* const userNumber = document.getElementById('user number');
+console.log(userNumber); */
 
 //     -generate a number for the computer (1 to 5)
 
@@ -120,7 +123,7 @@ if (sum % 2 === 0) {
 
 //     -set the exercise as a function
 
-function sumNcheck(userNumber) {
+/* function sumNcheck(userNumber) {
 
     function getRandomNumberInt(min, max) {
         return Math.floor(Math.random() * (5 - 1 + 1) ) + 1;
@@ -138,4 +141,44 @@ function sumNcheck(userNumber) {
 };
 
 
-console.log(sumNcheck(userNumber));
+console.log(sumNcheck(userNumber)); */
+
+// - print everything on page
+
+const form = document.querySelector('form')
+
+form.addEventListener('submit', function (e) {
+    e.preventDefault()
+
+    const userGuess = document.getElementById('even').checked;
+    const userNumber = Number(document.getElementById('user_number').value);
+
+    console.log(userGuess);
+    console.log(userNumber);
+
+    function sumNcheck(userNumber) {
+
+        function getRandomNumberInt(min, max) {
+            return Math.floor(Math.random() * (5 - 1 + 1)) + 1;
+        };
+
+        const computerNumber = getRandomNumberInt();
+
+        console.log(computerNumber);
+
+        const result = (userNumber + computerNumber) % 2;
+
+        // console.log(result);
+
+        return result === 0
+    };
+
+    // console.log(sumNcheck(userNumber));
+
+    if (userGuess === sumNcheck(userNumber)) {
+        console.log('win');
+    } else {
+        console.log('loose');
+    }
+
+});
