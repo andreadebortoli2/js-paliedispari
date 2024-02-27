@@ -9,8 +9,23 @@ Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzion
 
 # Steps
 
--
+- # 1
+    -ask user for a word
+    -set the word as an array:
+        -split the word in letters
+        -push each letter as an element of the array
+    -check if the word is a palindrome
+        -read the array in reverse
+        -find if the array reverse is equal to the normalò array
+    -print the result
 
 # Tools
 
--
+-prompt
+-const / let
+-.split()
+-.push()
+-.reverse()
+-if / else
+-function name(params){ }
+-console.log()
