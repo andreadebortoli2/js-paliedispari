@@ -144,7 +144,7 @@ console.log(sumNcheck(userNumber)); */
 
 // - print everything on page
 
-const form = document.querySelector('form')
+const form = document.querySelector('form');
 
 form.addEventListener('submit', function (e) {
     e.preventDefault()
@@ -155,7 +155,7 @@ form.addEventListener('submit', function (e) {
     // console.log(userGuess);
     // console.log(userNumber);
 
-    function getRandomNumberInt(min, max) {
+    function getRandomNumberInt() {
         return Math.floor(Math.random() * (5 - 1 + 1)) + 1;
     };
 
@@ -177,12 +177,12 @@ form.addEventListener('submit', function (e) {
 
     const resultBox = document.querySelector('.result_box');
 
-    const evenOrOdd = sumNcheck(userNumber) ? 'EVEN' : 'ODD'
+    const evenOrOdd = sumNcheck(userNumber) ? 'EVEN' : 'ODD';
 
-    const winLoose = userGuess === sumNcheck(userNumber) ? 'WIN' : 'LOOSE'
+    const winLoose = userGuess === sumNcheck(userNumber) ? 'WIN' : 'LOOSE';
 
-    const resultMarkup = `the computer number was ${computerNumber} and the sum was ${evenOrOdd} so you ${winLoose}!!`
+    const resultMarkup = `the computer number was ${computerNumber} and the sum was ${evenOrOdd} so you ${winLoose}!!`;
 
-    resultBox.insertAdjacentHTML('beforeend', resultMarkup);
+    resultBox.innerHTML = resultMarkup;
 
 });
